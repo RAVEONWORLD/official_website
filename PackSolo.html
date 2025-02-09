@@ -7,18 +7,77 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style> 
     
-    body {
-        background-color: #0F0404; 
-        position: relative; 
-    }
+    /* Importar Montserrat desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
+@font-face {
+    font-family: 'Aceh';
+    src: url('/fonts/aceh.woff2') format('woff2'),
+         url('/fonts/aceh.woff') format('woff'),
+         url('fonts/Aceh-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+         body {
+            font-family: 'Montserrat', sans-serif;
+            overflow: auto;
+            background: linear-gradient(315deg, #534701 3%, #0F0404 38%, #0F0404 68%, #0F0404 98%);
+            animation: gradient 15s ease infinite;
+            background-size: 400% 400%;
+            background-attachment: fixed;
+            position: relative;
+        }
+
+h1, h2, h3 {
+    font-family: 'Aceh', sans-serif; /* Usar Aceh en los títulos */
+}
+
+/* Olas en el body usando pseudo-elementos */
+body::before,
+body::after {
+   content: "";
+   background: rgba(255, 255, 255, 0.116);
+   border-radius: 1000% 1000% 0 0;
+   position: fixed;
+   width: 200%;
+   height: 12em;
+   bottom: 0;
+   left: 0;
+   z-index: -1;
+   opacity: 0.8;
+   animation: wave 10s -3s linear infinite;
+   transform: translate3d(0, 0, 0);
+}
+
+body::after {
+   bottom: -1.25em;
+   animation: wave 18s linear reverse infinite;
+   opacity: 0.9;
+}
+
+@keyframes gradient {
+   0% { background-position: 0% 0%; }
+   50% { background-position: 100% 100%; }
+   100% { background-position: 0% 0%; }
+}
+
+@keyframes wave {
+   2% { transform: translateX(1px); }
+   25% { transform: translateX(-25%); }
+   50% { transform: translateX(-50%); }
+   75% { transform: translateX(-25%); }
+   100% { transform: translateX(1px); }
+}
+
 
 
     p,span,h4,h3,h2,h1,li{
-        color: #FFFFF0;
+        color: #F3D9D1;
     }
 
     header {
-          background:  #0F0404;
+          
           width: 100%;
           display: flex;
           flex-direction: column; /* Organiza los elementos en una columna */
@@ -28,8 +87,9 @@
         }
 
         header img {
-          max-height: 100px; 
-          margin-bottom: 30px; 
+          margin: 0 auto;
+          height: 150px; 
+          /* margin-bottom: 30px;  */
         }
 
         header nav {
@@ -38,7 +98,7 @@
         }
 
         header nav a {
-          color: #FFFFF0;
+            color: #F3D9D1;
           text-decoration: none;
           font-size: 18px;
           transition: color 0.3s ease;
@@ -56,7 +116,7 @@
 
 
     footer{
-            background: #0F0404 ;
+            
             width: 100%;
             display: flex; 
             justify-content: center; 
@@ -115,7 +175,7 @@
 
         button:active{
             background-color: #0F0404;
-            color: #FFFFF0;
+            color: #F3D9D1;
             transition: background-color 0.2s ease, color 0.2s ease;
         }
 
@@ -188,6 +248,7 @@
 section h2{
     margin-top: 0px;
     float: left;
+    text-transform: uppercase;
 }
 
 
@@ -239,7 +300,7 @@ section h2{
         }
 
         footer li a, footer li a:visited{
-          color: white;
+            color: #F3D9D1;
         }
         footer li a:hover {
           color: #FFE10B; 
@@ -254,12 +315,12 @@ section h2{
     <header>
 
         <a href="index.html">
-          <img src="img/Logos Rave On-01.png" alt="Logo">
+            <img src="img/IMAGOTIPO_BY.png" alt="Logo">
         </a>
 
         <nav>
           <a href="index.html" class="activePage">Home</a>
-          <a href="Line-up.html">Line up</a>
+          <a href="Line-up.html" id="lineUp">Line up</a>
           <a href="fyq.html">FYQ</a>
           <a href="TravelInfo.html">Travel Info</a>
           <a href="Rules.html">Rules</a>
@@ -283,7 +344,7 @@ section h2{
                 </div>
                 
                 <div>
-                    <p>15€</p>
+                    <p>16,50€</p>
                 <a href="https://buy.stripe.com/test_cN29BBgrQ7RaalyfYY"><button type="button">BUY</button></a>
                 </div>
             </section>
@@ -295,19 +356,19 @@ section h2{
                 </div>
                 
                 <div>
-                    <p>20€</p>
+                    <p>21,50€</p>
                 <a href="https://buy.stripe.com/test_cN29BBgrQ7RaalyfYY"><button type="button">BUY</button></a>
                 </div>
             </section>
     
             <section id="thirdRelease">
-                <h2>Loyal <br>Raver</h2>
+                <h2>Trustly <br>Raver</h2>
                 <div>
                     <p id="contador3"></p>
                 </div>
                 
                 <div>
-                    <p>25€</p>
+                    <p>26,50€</p>
                 <a href="https://buy.stripe.com/test_cN29BBgrQ7RaalyfYY"><button type="button">BUY</button></a>
                 </div>
             </section>
@@ -323,6 +384,21 @@ section h2{
                 <a href="https://buy.stripe.com/test_cN29BBgrQ7RaalyfYY"><button type="button">BUY</button></a>
                 </div>
             </section>
+
+            <section>
+                <h2>Door</h2>
+                <div>
+                    <p id="door">Saturday, March 22 <br> at 9:00 PM</p>
+                </div>
+                
+                <div>
+                    <p>35,15€</p>
+                   
+                    <p>We will have <br> a card machine <br> for payments</p>
+
+                
+                </div>
+            </section>
     
         </div>
     
@@ -330,15 +406,10 @@ section h2{
     
 
     <footer>
-        <p> © 2025 Rave On Inc. Todos los Derechos Reservados </p>
+        <p> © 2025 Rave On. All Rights Reserved. </p>
 
         <div>
           <ul>
-            <li >
-              <a href="tel:+4796870566" aria-label="Call us">
-                <i class="fa-solid fa-phone"></i>
-              </a>
-            </li>
             <li >
               <a href="mailto:RAVEONWORLD@GMAIL.COM" aria-label="Send us an email">
                 <i class="fa-solid fa-envelope"></i>
@@ -366,9 +437,15 @@ section h2{
 
 
     <script>
-        const deadline = new Date("2025-03-22T23:59:59").getTime(); // Fecha límite
+        const deadline = new Date("2025-02-13T17:00:00").getTime(); // Fecha límite 13 de febrero family raver
+        const deadline2 = new Date("2025-02-24T17:00:00").getTime(); // Fecha límite 24 de febrero loyal raver
+        const deadline3 = new Date("2025-03-14T17:00:00").getTime(); // Fecha límite 14 de marzo trustly raver
+        const deadline4 = new Date("2025-03-21T17:00:00").getTime(); // Fecha límite 21 de marzo lately raver 
 
        
+
+       
+        // family raver contandor
         const countdown = setInterval(() => {
             const now = new Date().getTime(); 
             const timeLeft = deadline - now; // Diferencia en milisegundos
@@ -387,12 +464,192 @@ section h2{
                 // Cuando el tiempo se acabe
                 clearInterval(countdown);
                 document.getElementById("contador1").classList.add("expired");
-                document.getElementById("contador1").innerHTML = "¡La venta de entradas ha terminado!";
+                document.getElementById("contador1").innerHTML = `Ticket sales have ended!`;
+                // Deshabilitar el enlace
+                let link = document.querySelector("#firstRelease a");
+                link.style.pointerEvents = "none"; // Evita clics
+                link.style.opacity = "0.5"; // Reduce visibilidad
+                link.style.cursor = "not-allowed"; // Muestra cursor de deshabilitado
+
+                let button = document.querySelector("#firstRelease button");
+                button.style.border = "5px solid red";
+                button.style.backgroundColor = "red";
             }
         }, 1000);
 
 
+        // loyal raver contandor
+        
+        const countdown2 = setInterval(() => {
+          const now = new Date().getTime(); // Obtiene la fecha y hora actual
+
+          if (now < deadline) {
+              // Si la fecha actual es menor que el deadline1, no mostrar el contador
+              document.getElementById("contador2").innerHTML = "Coming Soon";
+               // Deshabilitar el enlace y el botón
+               let link = document.querySelector("#secondRelease a");
+              link.style.pointerEvents = "none"; 
+              link.style.opacity = "0.5"; 
+              link.style.cursor = "not-allowed";
+
+              
+          } else if (now >= deadline && now < deadline2) {
+              // Si la fecha está entre deadline1 y deadline2, mostrar el contador
+              const timeLeft = deadline2 - now; // Diferencia en milisegundos
+
+              const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+              const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+              const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+              const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+              document.getElementById("contador2").innerHTML = 
+                  `Expire in: ${days} days,<br>${hours} hours,<br>${minutes} minutes,<br>${seconds} seconds.`;
+
+                      // Restaurar el enlace y el botón
+                      let link = document.querySelector("#secondRelease a");
+                      link.style.pointerEvents = "auto"; 
+                      link.style.opacity = "1"; 
+                      link.style.cursor = "pointer";
+
+                     
+
+          } else {
+              // Cuando el tiempo se acabe
+              clearInterval(countdown2);
+              document.getElementById("contador2").classList.add("expired");
+              document.getElementById("contador2").innerHTML = `Ticket sales  have ended!`;
+
+              // Deshabilitar el enlace y el botón
+              let link = document.querySelector("#secondRelease a");
+              link.style.pointerEvents = "none"; 
+              link.style.opacity = "0.5"; 
+              link.style.cursor = "not-allowed";
+
+              let button = document.querySelector("#secondRelease button");
+              button.style.border = "5px solid red";
+              button.style.backgroundColor = "red";
+          }
+      }, 1000);
+
+
+
+        // trustly raver contandor
+        const countdown3 = setInterval(() => {
+          const now = new Date().getTime(); // Obtiene la fecha y hora actual
+
+          if (now < deadline2) {
+              // Si la fecha actual es menor que el deadline2, no mostrar el contador
+              document.getElementById("contador3").innerHTML = "Coming Soon";
+               // Deshabilitar el enlace y el botón
+               let link = document.querySelector("#thirdRelease a");
+              link.style.pointerEvents = "none"; 
+              link.style.opacity = "0.5"; 
+              link.style.cursor = "not-allowed";
+
+          } else if (now >= deadline2 && now < deadline3) {
+              // Si la fecha está entre deadline2 y deadline3, mostrar el contador
+              const timeLeft = deadline3 - now; // Diferencia en milisegundos
+
+              const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+              const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+              const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+              const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+              document.getElementById("contador3").innerHTML = 
+                  `Expire in: ${days} days,<br>${hours} hours,<br>${minutes} minutes,<br>${seconds} seconds.`;
+
+                      // Restaurar el enlace y el botón
+                      let link = document.querySelector("#thirdRelease a");
+                      link.style.pointerEvents = "auto"; 
+                      link.style.opacity = "1"; 
+                      link.style.cursor = "pointer";
+
+                     
+
+          } else {
+              // Cuando el tiempo se acabe
+              clearInterval(countdown3);
+              document.getElementById("contador3").classList.add("expired");
+              document.getElementById("contador3").innerHTML = `Ticket sales have ended!`;
+
+              // Deshabilitar el enlace y el botón
+              let link = document.querySelector("#thirdRelease a");
+              link.style.pointerEvents = "none"; 
+              link.style.opacity = "0.5"; 
+              link.style.cursor = "not-allowed";
+
+              let button = document.querySelector("#thirdRelease button");
+              button.style.border = "5px solid red";
+              button.style.backgroundColor = "red";
+          }
+      }, 1000);
+        // lately raver contandor
+
+        const countdown4 = setInterval(() => {
+          const now = new Date().getTime(); // Obtiene la fecha y hora actual
+
+          if (now < deadline3) {
+              // Si la fecha actual es menor que el deadline2, no mostrar el contador
+              document.getElementById("contador4").innerHTML = "Coming Soon";
+               // Deshabilitar el enlace y el botón
+               let link = document.querySelector("#fourthRelease a");
+              link.style.pointerEvents = "none"; 
+              link.style.opacity = "0.5"; 
+              link.style.cursor = "not-allowed";
+
+          } else if (now >= deadline2 && now < deadline3) {
+              // Si la fecha está entre deadline2 y deadline3, mostrar el contador
+              const timeLeft = deadline4 - now; // Diferencia en milisegundos
+
+              const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+              const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+              const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+              const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+              document.getElementById("contador4").innerHTML = 
+                  `Expire in: ${days} days,<br>${hours} hours,<br>${minutes} minutes,<br>${seconds} seconds.`;
+
+                      // Restaurar el enlace y el botón
+                      let link = document.querySelector("#fourthRelease a");
+                      link.style.pointerEvents = "auto"; 
+                      link.style.opacity = "1"; 
+                      link.style.cursor = "pointer";
+
+                     
+
+          } else {
+              // Cuando el tiempo se acabe
+              clearInterval(countdown4);
+              document.getElementById("contador4").classList.add("expired");
+              document.getElementById("contador4").innerHTML = `¡Ticket sales  have ended!`;
+
+              // Deshabilitar el enlace y el botón
+              let link = document.querySelector("#fourthRelease a");
+              link.style.pointerEvents = "none"; 
+              link.style.opacity = "0.5"; 
+              link.style.cursor = "not-allowed";
+
+              let button = document.querySelector("#fourthRelease button");
+              button.style.border = "5px solid red";
+              button.style.backgroundColor = "red";
+          }
+      }, 1000);
+
+        // line-up header control
+
+        document.addEventListener("DOMContentLoaded", function () {
+                    const enlace = document.getElementById("lineUp");
+                    const fechaActual = new Date();
+                    const fechaLimite = new Date(fechaActual.getFullYear(), 2, 3); // 3 de marzo (mes 2 porque en JS enero = 0)
+
+                    if (fechaActual < fechaLimite) {
+                        enlace.removeAttribute("href"); // Elimina el atributo href para deshabilitar el enlace
+                        enlace.style.pointerEvents = "none"; // Evita interacción
+                        enlace.style.color = "red"; // Cambia color para indicar que está deshabilitado            
+                    }
+                });
     </script>
+    
     
 </body>
 </html>

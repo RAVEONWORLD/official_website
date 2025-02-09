@@ -5,36 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
 
     <style>
-        body {
-          background-color: #0F0404; 
-          position: relative; 
+/* Importar Montserrat desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
+@font-face {
+    font-family: 'Aceh';
+    src: url('/fonts/aceh.woff2') format('woff2'),
+         url('/fonts/aceh.woff') format('woff'),
+         url('fonts/Aceh-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+         body {
+            font-family: 'Montserrat', sans-serif;
+            overflow: auto;
+            background: linear-gradient(315deg, #534701 3%, #0F0404 38%, #0F0404 68%, #0F0404 98%);
+            animation: gradient 15s ease infinite;
+            background-size: 400% 400%;
+            background-attachment: fixed;
+            position: relative;
         }
 
-        body::before {
-            content: ""; 
-            position: absolute; 
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url(img/Logos\ Rave\ On-07.png); 
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: 400px; 
-            opacity: 0.1; 
-            pointer-events: none; 
-            z-index: -1; 
-            margin-top: 40px;
-        }
+h1, h2, h3 {
+    font-family: 'Aceh', sans-serif; /* Usar Aceh en los títulos */
+}
+
+/* Olas en el body usando pseudo-elementos */
+body::before,
+body::after {
+    content: "";
+    background: rgba(255, 255, 255, 0.116);
+    border-radius: 1000% 1000% 0 0;
+    position: fixed;
+    width: 200%;
+    height: 12em;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.8;
+    animation: wave 10s -3s linear infinite;
+    transform: translate3d(0, 0, 0);
+}
+
+body::after {
+    bottom: -1.25em;
+    animation: wave 18s linear reverse infinite;
+    opacity: 0.9;
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
+@keyframes wave {
+    2% { transform: translateX(1px); }
+    25% { transform: translateX(-25%); }
+    50% { transform: translateX(-50%); }
+    75% { transform: translateX(-25%); }
+    100% { transform: translateX(1px); }
+}
+
+        
 
         p,span,h4,h3,h2,h1,li{
-            color: #FFFFF0;
+          color: #F3D9D1;
         }
 
         header {
-          background:  #0F0404;
+          
           width: 100%;
           display: flex;
           flex-direction: column; /* Organiza los elementos en una columna */
@@ -44,8 +88,9 @@
         }
 
         header img {
-          max-height: 100px; 
-          margin-bottom: 30px; 
+          margin: 0 auto;
+          height: 150px; 
+          /* margin-bottom: 30px;  */
         }
 
         header nav {
@@ -54,7 +99,7 @@
         }
 
         header nav a {
-          color: #FFFFF0;
+          color: #F3D9D1;
           text-decoration: none;
           font-size: 18px;
           transition: color 0.3s ease;
@@ -76,8 +121,7 @@
           height: auto;
         }
 
-        footer{
-            background: #0F0404 ;
+        footer{         
             width: 100%;
             display: flex; 
             justify-content: center; 
@@ -137,7 +181,7 @@
 
         button:active{
             background-color: #0F0404;
-            color: #FFFFF0;
+            color: #F3D9D1;
             transition: background-color 0.2s ease, color 0.2s ease;
         }
 
@@ -200,7 +244,7 @@
         }
 
         footer li a, footer li a:visited{
-          color: white;
+          color: #F3D9D1;
         }
         footer li a:hover {
           color: #FFE10B; 
@@ -212,7 +256,7 @@
     <header>
 
         <a href="index.html">
-          <img src="img/Logos Rave On-01.png" alt="Logo">
+          <img src="img/IMAGOTIPO_BY.png" alt="Logo">
         </a>
 
         <nav>
@@ -248,15 +292,10 @@
     
 
     <footer>
-        <p> © 2025 Rave On Inc. Todos los Derechos Reservados </p>
+        <p> © 2025 Rave On. All Rights Reserved. </p>
 
         <div>
           <ul>
-            <li >
-              <a href="tel:+4796870566" aria-label="Call us">
-                <i class="fa-solid fa-phone"></i>
-              </a>
-            </li>
             <li >
               <a href="mailto:RAVEONWORLD@GMAIL.COM" aria-label="Send us an email">
                 <i class="fa-solid fa-envelope"></i>
