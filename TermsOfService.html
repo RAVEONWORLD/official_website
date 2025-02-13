@@ -253,12 +253,6 @@
           color: #FFE10B; 
         }
 
-        @media (max-width: 900px) {
-          footer ul{
-            margin-top: 0px;
-          }
-          
-        }
         
         #logo-video {
             width: 300px;  
@@ -274,6 +268,39 @@
 
         section a:visited {
             color: #c0a301;
+        }
+
+        .footer-links {
+          width: 100%; /* Asegura que ocupe todo el ancho disponible */
+          text-align: center; /* Centra los enlaces */
+          clear: both; /* Evita que floten junto a los iconos */
+          margin-top: -30px;
+        }
+
+        .footer-links a {
+          display: block; /* Hace que cada enlace ocupe toda la línea */
+          
+          margin: 5px 0; /* Espaciado entre enlaces */
+        }
+
+        .footer-links a {
+            color: #c0a301; 
+            text-decoration: none; 
+        }
+
+        .footer-links a:visited {
+            color: #c0a301;
+        }
+
+        @media (max-width: 900px) {
+          footer ul{
+            margin-top: 0px;
+            margin-bottom: -20px;
+          }
+
+          .footer-links{
+            margin-top: 0px;
+          }
         }
     </style>
 </head>
@@ -416,6 +443,10 @@
           </ul>
       </div>
       
+      <div class="footer-links">
+        <a href="PrivacyPolicy.html">Privacy Policy</a>
+        <a href="TermsOfService.html">Terms of Service</a>
+      </div>
 
     </footer>
 

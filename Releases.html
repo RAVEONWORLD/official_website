@@ -337,6 +337,36 @@ section h2{
             display: block;
             mix-blend-mode: lighten;
         }
+
+        .footer-links {
+          width: 100%; /* Asegura que ocupe todo el ancho disponible */
+          text-align: center; /* Centra los enlaces */
+          clear: both; /* Evita que floten junto a los iconos */
+          margin-top: -30px;
+        }
+
+        .footer-links a {
+          display: block; /* Hace que cada enlace ocupe toda la línea */
+          
+          margin: 5px 0; /* Espaciado entre enlaces */
+        }
+
+        .footer-links a {
+            color: #c0a301; 
+            text-decoration: none; 
+        }
+
+        .footer-links a:visited {
+            color: #c0a301;
+        }
+
+        @media (max-width: 900px) {
+          
+
+          .footer-links{
+            margin-top: -20px;
+          }
+        }
         
 
     </style>
@@ -478,6 +508,11 @@ section h2{
               </a>
             </li>
           </ul>
+      </div>
+
+      <div class="footer-links">
+        <a href="PrivacyPolicy.html">Privacy Policy</a>
+        <a href="TermsOfService.html">Terms of Service</a>
       </div>
 
     </footer>
