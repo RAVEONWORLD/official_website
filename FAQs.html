@@ -5,7 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PQG257F504"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
+      gtag('config', 'G-PQG257F504');
+    </script>
     <style>
         /* Importar Montserrat desde Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
@@ -19,57 +27,19 @@
     font-style: normal;
 }
 
-         body {
+body {
             font-family: 'Montserrat', sans-serif;
             overflow: auto;
-            background: linear-gradient(315deg, #534701 3%, #0F0404 38%, #0F0404 68%, #0F0404 98%);
-            animation: gradient 15s ease infinite;
-            background-size: 400% 400%;
-            background-attachment: fixed;
-            position: relative;
+            background: #0F0404 38%;
+            
         }
+
 
 h1, h2, h3 {
     font-family: 'Aceh', sans-serif; /* Usar Aceh en los títulos */
 }
 
 
-/* Olas en el body usando pseudo-elementos */
-body::before,
-body::after {
-    content: "";
-    background: rgba(255, 255, 255, 0.116);
-    border-radius: 1000% 1000% 0 0;
-    position: fixed;
-    width: 200%;
-    height: 12em;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-    opacity: 0.8;
-    animation: wave 10s -3s linear infinite;
-    transform: translate3d(0, 0, 0);
-}
-
-body::after {
-    bottom: -1.25em;
-    animation: wave 18s linear reverse infinite;
-    opacity: 0.9;
-}
-
-@keyframes gradient {
-    0% { background-position: 0% 0%; }
-    50% { background-position: 100% 100%; }
-    100% { background-position: 0% 0%; }
-}
-
-@keyframes wave {
-    2% { transform: translateX(1px); }
-    25% { transform: translateX(-25%); }
-    50% { transform: translateX(-50%); }
-    75% { transform: translateX(-25%); }
-    100% { transform: translateX(1px); }
-}
 
         p,span,h4,h3,h2,h1,li{
           color: #F3D9D1;
@@ -111,6 +81,33 @@ body::after {
           color: #FFE10B; 
           border-bottom: 1px solid #FFE10B;
         }
+
+         /* Estilos para pantallas pequeñas */
+         @media (max-width: 768px) {
+
+header{
+  height: 350px;
+}
+header nav {
+  width: 100%;
+  flex-direction: column; /* Apila los enlaces verticalmente */
+  align-items: center;
+  margin-bottom: 150px;
+  gap: 13px;
+}
+
+header nav a {
+  display: block; /* Ocupa toda la línea */
+  
+  text-align: center; /* Centra el texto */   
+
+}
+
+header img{
+  margin-top: 150px;
+}
+}
+
 
 
         img {
@@ -325,7 +322,7 @@ body::after {
         <nav>
           <a href="index.html" >Home</a>
           <a href="Line-up.html" id="lineUp">Line up</a>
-          <a href="fyq.html"class="activePage">FYQ</a>
+          <a href="FAQs.html"class="activePage">FAQs</a>
           <a href="TravelInfo.html">Travel Info</a>
           <a href="Rules.html">Rules</a>
         </nav>
@@ -335,7 +332,7 @@ body::after {
 
     <article>
       <div>
-        <h1>FYQ</h1>
+        <h1>FAQs</h1>
       </div>
     </article>
 
@@ -362,11 +359,11 @@ body::after {
         </div>
         <div class="accordion-item">
           <button class="accordion-header">
-            <span>IS THERE A CLOAKROOM?</span>
+            <span>IS THERE A WARDROBE?</span>
             <span class="accordion-icon">+</span>
           </button>
           <div class="accordion-content">
-            <p>Yes, a cloakroom is available. We recommend leaving your stuff there so you can move freely. Neither the promoter, security, nor the venue are responsible for lost items.
+            <p>Yes, a wardrobe is available. We recommend leaving your stuff there so you can move freely. Neither the promoter, security, nor the venue are responsible for lost items.
             </p>
           </div>
         </div>
@@ -388,7 +385,7 @@ body::after {
             <span class="accordion-icon">+</span>
           </button>
           <div class="accordion-content">
-            <p>Yes, there will be an open-air smoking area. You can access it through a separate entrance from the main venue. </p>
+            <p>Yes, to smoke, you must exit through the main entrance. Re-entry is allowed by simply showing your wristband. </p>
           </div>
         </div>
         <div class="accordion-item">
@@ -491,7 +488,7 @@ body::after {
       document.addEventListener("DOMContentLoaded", function () {
             const enlace = document.getElementById("lineUp");
             const fechaActual = new Date();
-            const fechaLimite = new Date(fechaActual.getFullYear(), 2, 3); // 3 de marzo (mes 2 porque en JS enero = 0)
+            const fechaLimite = new Date(fechaActual.getFullYear(), 2, 3, 17, 0, 0); // 3 de marzo a las 17:00
 
             if (fechaActual < fechaLimite) {
                 enlace.removeAttribute("href"); // Elimina el atributo href para deshabilitar el enlace
