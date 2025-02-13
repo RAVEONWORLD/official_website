@@ -22,13 +22,15 @@
     /* Importar Montserrat desde Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
 
-@font-face {
+/* Webfont: Aceh-Bold */@font-face {
     font-family: 'Aceh';
-    src: url('/fonts/aceh.woff2') format('woff2'),
-         url('/fonts/aceh.woff') format('woff'),
-         url('fonts/Aceh-Light.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+    src: url('Aceh-Bold.eot'); /* IE9 Compat Modes */
+    src: url('Aceh-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('Aceh-Bold.woff') format('woff'), /* Modern Browsers */
+         url('Aceh-Bold.ttf') format('truetype'); /* Safari, Android, iOS */
+             font-style: normal;
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
 }
 
 body {
@@ -39,8 +41,9 @@ body {
         }
 
 
-h1, h2, h3 {
+        h1, h2, h3, header nav a {
     font-family: 'Aceh', sans-serif; /* Usar Aceh en los títulos */
+    
 }
 
 
@@ -72,10 +75,11 @@ h1, h2, h3 {
         }
 
         header nav a {
-            color: #F3D9D1;
+          color: #F3D9D1;
           text-decoration: none;
           font-size: 18px;
           transition: color 0.3s ease;
+          text-transform: uppercase
         }
 
         header nav a:hover {
@@ -91,28 +95,28 @@ h1, h2, h3 {
          /* Estilos para pantallas pequeñas */
          @media (max-width: 768px) {
 
-header{
-  height: 350px;
-}
-header nav {
-  width: 100%;
-  flex-direction: column; /* Apila los enlaces verticalmente */
-  align-items: center;
-  margin-bottom: 150px;
-  gap: 13px;
-}
+        header{
+        height: 350px;
+        }
+        header nav {
+        width: 100%;
+        flex-direction: column; /* Apila los enlaces verticalmente */
+        align-items: center;
+        margin-bottom: 150px;
+        gap: 13px;
+        }
 
-header nav a {
-  display: block; /* Ocupa toda la línea */
-  
-  text-align: center; /* Centra el texto */   
+        header nav a {
+        display: block; /* Ocupa toda la línea */
+        
+        text-align: center; /* Centra el texto */   
 
-}
+        }
 
-header img{
-  margin-top: 150px;
-}
-}
+        header img{
+        margin-top: 150px;
+        }
+        }
 
 
 
@@ -183,6 +187,7 @@ header img{
         h1 {
             margin-bottom: 20px; /* Espacio después del h1 */
             border-bottom: 2px solid #FFE10B; /* Definir el borde con el estilo 'solid' */
+            text-transform: uppercase;
         }
 
 
@@ -278,7 +283,7 @@ section h2{
 
         footer ul{
           list-style-type: none;
-          margin-top: 25px;
+          margin-top: 20px;
           padding: 0; 
           
           text-align: left;
@@ -307,6 +312,30 @@ section h2{
           color: #FFE10B; 
         }
         
+        #h2SmallScreen {
+            display: none; /* Ocultar por defecto */
+        }
+
+        #h2BigScreen {
+            display: block; /* Mostrar por defecto en pantallas grandes */
+        }
+
+        @media (max-width: 900px) { /* Para pantallas pequeñas */
+            #h2SmallScreen {
+                display: block; /* Mostrar en pantallas pequeñas */
+            }
+
+            #h2BigScreen {
+                display: none; /* Ocultar en pantallas pequeñas */
+            }
+            
+            footer ul{
+            margin-top: 0px;
+          }
+        }
+
+       
+
         
 
     </style>
@@ -338,7 +367,8 @@ section h2{
         <div class="contenedor">
 
             <section id="earlyRelease">
-                <h2>Super Early <br>Raver</h2>
+                 <h2 id="h2SmallScreen">Super Early <br>Raver</h2> 
+                 <h2 id="h2BigScreen"> Super <br> Early <br> Raver</h2>
                 <div>
                     <p id="earlyContador"></p>
                 </div>
