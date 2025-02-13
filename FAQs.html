@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+    <title>FAQs</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-PQG257F504"></script>
@@ -32,7 +32,7 @@
 body {
             font-family: 'Montserrat', sans-serif;
             overflow: auto;
-            background: #0F0404 38%;
+            background: #000000;
             
         }
 
@@ -57,11 +57,7 @@ body {
           height: 200px; /* Ajusta el tamaño del header */
         }
 
-        header img {
-          margin: 0 auto;
-          height: 150px; 
-          /* margin-bottom: 30px;  */
-        }
+        
 
         header nav {
           display: flex;
@@ -107,17 +103,14 @@ header nav a {
 
 }
 
-header img{
+header video{
   margin-top: 150px;
 }
 }
 
 
 
-        img {
-          width: 150px; 
-          height: auto;
-        }
+        
 
         footer{
           
@@ -320,14 +313,24 @@ header img{
           
         }
 
+        #logo-video {
+            width: 300px;  
+            height: auto;
+            display: block;
+            mix-blend-mode: lighten;
+        }
+
     </style>
 </head>
 <body>
     <header>
 
-        <a href="index.html">
-          <img src="img/IMAGOTIPO_BY.png" alt="Logo">
-        </a>
+      <a href="index.html">
+        <video autoplay loop muted playsinline id="logo-video">
+            <source src="img/logo3d.mp4" type="video/mp4">
+            Tu navegador no soporta videos.
+        </video>
+    </a>
 
         <nav>
           <a href="index.html" >Home</a>

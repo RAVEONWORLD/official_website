@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rules</title>
+    <title>Terms Of Service</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-PQG257F504"></script>
@@ -19,34 +19,31 @@
       /* Importar Montserrat desde Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
 
-/* Webfont: Aceh-Bold */@font-face {
-  font-family: 'Aceh';
-    src: url('Aceh-Bold.eot'); /* IE9 Compat Modes */
-    src: url('Aceh-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('Aceh-Bold.woff') format('woff'), /* Modern Browsers */
-         url('Aceh-Bold.ttf') format('truetype'); /* Safari, Android, iOS */
-             font-style: normal;
-    font-weight: bold;
-    text-rendering: optimizeLegibility;
-}
+    /* Webfont: Aceh-Bold */@font-face {
+      font-family: 'Aceh';
+        src: url('Aceh-Bold.eot'); /* IE9 Compat Modes */
+        src: url('Aceh-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+            url('Aceh-Bold.woff') format('woff'), /* Modern Browsers */
+            url('Aceh-Bold.ttf') format('truetype'); /* Safari, Android, iOS */
+                font-style: normal;
+        font-weight: bold;
+        text-rendering: optimizeLegibility;
+    }
 
-body {
+         body {
             font-family: 'Montserrat', sans-serif;
             overflow: auto;
-            background: #000000 ;
+            background: #000000;   
+        }
+
+                h1, h2, h3, header nav a {
+            font-family: 'Aceh', sans-serif; /* Usar Aceh en los títulos */
             
         }
 
 
-        h1, h2, h3, header nav a {
-    font-family: 'Aceh', sans-serif; /* Usar Aceh en los títulos */
-    
-}
-
-
-
         p,span,h4,h3,h2,h1,li{
-          color: #F3D9D1;
+            color: #F3D9D1;
         }
 
         header {
@@ -59,11 +56,10 @@ body {
           height: 200px; /* Ajusta el tamaño del header */
         }
 
-        
 
         header nav {
           display: flex;
-          gap: 20px; 
+          gap: 20px;
         }
 
         header nav a {
@@ -79,43 +75,39 @@ body {
           border-bottom: 1px solid #FFE10B;
         }
 
-        .activePage{
-          color: #FFE10B; 
-          border-bottom: 1px solid #FFE10B;
-        }
-
-         /* Estilos para pantallas pequeñas */
-         @media (max-width: 768px) {
-
-header{
-  height: 350px;
-}
-header nav {
-  width: 100%;
-  flex-direction: column; /* Apila los enlaces verticalmente */
-  align-items: center;
-  margin-bottom: 150px;
-  gap: 13px;
-}
-
-header nav a {
-  display: block; /* Ocupa toda la línea */
-  
-  text-align: center; /* Centra el texto */   
-
-}
-
-header video{
-  margin-top: 150px;
-}
-}
-
-
+        
 
        
+        /* Estilos para pantallas pequeñas */
+        @media (max-width: 768px) {
+
+          header{
+            height: 350px;
+          }
+          header nav {
+            width: 100%;
+            flex-direction: column; /* Apila los enlaces verticalmente */
+            align-items: center;
+            margin-bottom: 150px;
+            gap: 13px;
+          }
+
+          header nav a {
+            display: block; /* Ocupa toda la línea */
+            
+            text-align: center; /* Centra el texto */   
+           
+          }
+
+          header video{
+            margin-top: 150px;
+          }
+        }
+
+        
 
         footer{
-            
+           
             width: 100%;
             display: flex; 
             justify-content: center; 
@@ -145,12 +137,7 @@ header video{
             }
         }
 
-        /* Cuando la pantalla sea menor a 600px, pasa a 1 columna */
-        @media (max-width: 600px) {
-            main {
-                grid-template-columns: 1fr;
-            }
-        }
+       
         
         section {
             display: flex; 
@@ -162,20 +149,16 @@ header video{
             margin-bottom: 50px;
         }
 
-        section ul{
-            text-align: left;
-            list-style-type: none;
-        }
+        
 
-        section li{
-            font-size: 20px;
-            margin-top: 10px;
-        }
-
-        section ul li::before{
-            content: "-";
-            font-weight: bold; 
-            margin-right: 5px; 
+ 
+        @media (max-width: 600px) {
+            main {
+                grid-template-columns: 1fr;
+            }
+            section ul{
+                align-self: start;
+            }
         }
 
 
@@ -264,6 +247,7 @@ header video{
 
         footer li a, footer li a:visited{
           color: #F3D9D1;
+
         }
         footer li a:hover {
           color: #FFE10B; 
@@ -276,7 +260,6 @@ header video{
           
         }
         
-
         #logo-video {
             width: 300px;  
             height: auto;
@@ -284,7 +267,14 @@ header video{
             mix-blend-mode: lighten;
         }
 
+        section a {
+            color: #c0a301; 
+            text-decoration: none; 
+        }
 
+        section a:visited {
+            color: #c0a301;
+        }
     </style>
 </head>
 <body>
@@ -296,70 +286,97 @@ header video{
             Tu navegador no soporta videos.
         </video>
     </a>
+
         <nav>
           <a href="index.html" >Home</a>
           <a href="Line-up.html" id="lineUp">Line up</a>
           <a href="FAQs.html">FAQs</a>
           <a href="TravelInfo.html">Travel Info</a>
-          <a href="Rules.html"class="activePage">Rules</a>
+          <a href="Rules.html">Rules</a>
         </nav>
 
 
     </header>
 
     
-    <h1>Rules</h1>
+    <h1>Terms Of Service</h1>
     
     
     <main>
 
         <section>
-            <h2>Access</h2>
-            <ul>
-                <li>
-                Entrance is required to enjoy the party! <br><br>
-                Don't forget to bring your wristband, it will allow you to go in and out whenever you need.
-                </li>
-            </ul>
+            <h2>Introduction </h2>
+            
+            <p>By using our website, we collect non-sensitive information such as visit data, pages viewed, time spent on the site, and your IP address through cookies and server logs.
+
+            </p>
         </section>
         
         <section>
-            <h2>Not allowed</h2>
-            <ul>
-                <li>
-                    Bringing outside drinks, drugs, weapons, or any dangerous objects.
-                </li>
-                <li>
-                    Disrespecting other attendees, the staff, or the venue. This is a place to enjoy!
-                </li>
-                <li>
-                    <b>NO FLASH!</b>
-                </li>
-            </ul>
+            <h2>External Links
+            </h2>
+
+            <p>Our website may contain links to other websites, for which RAVE ON is not responsible. These links do not imply endorsement of the content or the sites they lead to.
+
+            </p>
         </section>
         
         <section>
-            <h2>Sound & Security</h2>
-            <ul>
-                <li>
-                    The volume will be within the allowed limits (don’t worry, it will be enough to make you feel the vibe).
-                </li>
-                <li>
-                  Always follow the security team’s instructions.
-                </li>
-            </ul>
+            <h2>Intellectual Property
+            </h2>
+
+            <p>All copyrights, trademarks, and other intellectual property rights related to our website and the content on it are owned by RAVE ON. Unauthorized use of this content is prohibited.
+
+            </p>
         </section>
         
         <section>
-            <h2>Venue Care</h2>
-            <ul>
-                <li>
-                  Respect the space. We’re in a unique venue—appreciate it and enjoy the experience!
-                </li>
-                <li>
-                  Do not damage the furniture, facilities, or equipment. Let’s make this night unforgettable!
-                </li>
-            </ul>
+            <h2>Terms of Use
+            </h2>
+
+            <p>You agree to use our website only in a legal manner that does not infringe on the rights of others. Sending unsolicited advertising messages, manipulating APIs, or attempting unauthorized access to our website is prohibited.
+
+            </p>
+        </section>
+
+        <section>
+            <h2>Restricted Access
+            </h2>
+
+            <p>We may restrict access to certain parts of our website in the future. If you are provided with login details for restricted areas, you must keep your login credentials confidential.
+
+            </p>
+        </section>
+
+        <section>
+            <h2>Limitation of liability
+
+            </h2>
+
+            <p>RAVE ON does not guarantee the accuracy of the content on the site. The materials provided are "as is," and we are not liable for any losses or damages resulting from their use.
+
+            </p>
+        </section>
+
+        <section>
+            <h2>Policy Changes
+
+            </h2>
+
+            <p>We reserve the right to change these terms at any time. If such changes affect your data, we will inform you and ensure compliance with your previously given consent.
+
+            </p>
+
+        </section>
+
+        <section>
+            <h2>Contact 
+
+            </h2>
+
+            <p>If you have any questions regarding the terms or our website, please contact us at <a href="mailto:RAVEONWORLD@GMAIL.COM" aria-label="Send us an email">raveonworld@gmail.com </a>
+
+            </p>
         </section>
         
 
@@ -398,22 +415,23 @@ header video{
             </li>
           </ul>
       </div>
+      
 
     </footer>
 
     <script> 
-        document.addEventListener("DOMContentLoaded", function () {
-          const enlace = document.getElementById("lineUp");
-          const fechaActual = new Date();
-          const fechaLimite = new Date(fechaActual.getFullYear(), 2, 3, 17, 0, 0); // 3 de marzo a las 17:00
+      document.addEventListener("DOMContentLoaded", function () {
+        const enlace = document.getElementById("lineUp");
+        const fechaActual = new Date();
+        const fechaLimite = new Date(fechaActual.getFullYear(), 2, 3, 17, 0, 0); // 3 de marzo a las 17:00
 
-          if (fechaActual < fechaLimite) {
-              enlace.removeAttribute("href"); // Elimina el atributo href para deshabilitar el enlace
-              enlace.style.pointerEvents = "none"; // Evita interacción
-              enlace.style.color = "red"; // Cambia color para indicar que está deshabilitado            
-          }
+        if (fechaActual < fechaLimite) {
+            enlace.removeAttribute("href"); // Elimina el atributo href para deshabilitar el enlace
+            enlace.style.pointerEvents = "none"; // Evita interacción
+            enlace.style.color = "red"; // Cambia color para indicar que está deshabilitado            
+        }
       });
-    </script>
+  </script>
 
     
 </body>
