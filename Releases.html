@@ -530,10 +530,10 @@ section h2{
 
         
 
-          //super early raver contador
+          //super early raver 
 
           
-                // Cuando el tiempo se acabe
+                
               
               document.getElementById("earlyContador").classList.add("expired");
               document.getElementById("earlyContador").innerHTML = `SOLD OUT!`;
@@ -549,62 +549,21 @@ section h2{
               button.style.backgroundColor = "red";
             
 
-          
+              document.getElementById("contador1").classList.add("expired");
+              document.getElementById("contador1").innerHTML = `SOLD OUT!`;
 
-
-
-
-          // family raver contandor
-          const countdown = setInterval(() => {
-          const now = new Date().getTime(); // Obtiene la fecha y hora actual
-
-          if (now < deadline) {
-              // Si la fecha actual es menor que el deadline1, no mostrar el contador
-              document.getElementById("contador1").innerHTML = "Coming Soon";
-               // Deshabilitar el enlace y el botón
-               let link = document.querySelector("#firstRelease a");
-              link.style.pointerEvents = "none"; 
-              link.style.opacity = "0.5"; 
-              link.style.cursor = "not-allowed";
+              //family raver
 
               
-          } else if (now >= deadline && now < deadline2) {
-              // Si la fecha está entre deadline1 y deadline2, mostrar el contador
-              const timeLeft = deadline2 - now; // Diferencia en milisegundos
+              let link2 = document.querySelector("#firstRelease a");
+              link2.style.pointerEvents = "none"; 
+              link2.style.opacity = "0.5"; 
+              link2.style.cursor = "not-allowed";
 
-              const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-              const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-              const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-              const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
-              document.getElementById("contador1").innerHTML = 
-                  `Expire in: ${days} days,<br>${hours} hours,<br>${minutes} minutes,<br>${seconds} seconds.`;
-
-                      // Restaurar el enlace y el botón
-                      let link = document.querySelector("#firstRelease a");
-                      link.style.pointerEvents = "auto"; 
-                      link.style.opacity = "1"; 
-                      link.style.cursor = "pointer";
-
-                     
-
-          } else {
-              // Cuando el tiempo se acabe
-              clearInterval(countdown);
-              document.getElementById("contador1").classList.add("expired");
-              document.getElementById("contador1").innerHTML = `Ticket sales <br>  have ended!`;
-
-              // Deshabilitar el enlace y el botón
-              let link = document.querySelector("#firstRelease a");
-              link.style.pointerEvents = "none"; 
-              link.style.opacity = "0.5"; 
-              link.style.cursor = "not-allowed";
-
-              let button = document.querySelector("#firstRelease button");
-              button.style.border = "5px solid red";
-              button.style.backgroundColor = "red";
-          }
-      }, 1000);
+              let button2 = document.querySelector("#firstRelease button");
+              button2.style.border = "5px solid red";
+              button2.style.backgroundColor = "red";
+          
 
 
         // loyal raver contandor
