@@ -532,31 +532,11 @@ section h2{
 
           //super early raver contador
 
-          const countdownEarly = setInterval(() => {
-          const now = new Date().getTime();
-
-          if (now < deadline ) {
-            
-            const timeLeft = deadline - now; 
-
-            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
-            document.getElementById("earlyContador").innerHTML = 
-                `Expire in: ${days} days,<br>${hours} hours,<br>${minutes} minutes,<br>${seconds} seconds.`;
-
-                    // Restaurar el enlace y el botón
-                    let link = document.querySelector("#earlyRelease a");
-                    link.style.pointerEvents = "auto"; 
-                    link.style.opacity = "1"; 
-                    link.style.cursor = "pointer";
-            } else{
+          
                 // Cuando el tiempo se acabe
-              clearInterval(countdownEarly);
+              
               document.getElementById("earlyContador").classList.add("expired");
-              document.getElementById("earlyContador").innerHTML = `Ticket sales <br>  have ended!`;
+              document.getElementById("earlyContador").innerHTML = `SOLD OUT!`;
 
               // Deshabilitar el enlace y el botón
               let link = document.querySelector("#earlyRelease a");
@@ -567,9 +547,9 @@ section h2{
               let button = document.querySelector("#earlyRelease button");
               button.style.border = "5px solid red";
               button.style.backgroundColor = "red";
-            }
+            
 
-          },1000);
+          
 
 
 
