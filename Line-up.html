@@ -3,8 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Line-Up</title>
+    <title>RAVE ON - One Beat, One Family</title>
+
+    <!-- Meta para redes sociales (Open Graph para Facebook, WhatsApp) -->
+    <meta property="og:title" content="RAVE ON - One Beat, One Family">
+    <meta property="og:description" content="Official website of RAVE ON – high quality events, music and artists at every event. Join our rave family!">
+    <meta property="og:url" content="https://raveonworld.com/">
+
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-PQG257F504"></script>
     <script>
@@ -14,52 +22,34 @@
 
       gtag('config', 'G-PQG257F504');
     </script>
-    
-    <style>
 
-      /* Webfont: Aceh-Bold */@font-face {
-        font-family: 'Aceh';
-          src: url('Aceh-Bold.eot'); /* IE9 Compat Modes */
-          src: url('Aceh-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-              url('Aceh-Bold.woff') format('woff'), /* Modern Browsers */
-              url('Aceh-Bold.ttf') format('truetype'); /* Safari, Android, iOS */
-                  font-style: normal;
-          font-weight: bold;
-          text-rendering: optimizeLegibility;
-      }
-        body {
+
+    <style>
+/* Importar Montserrat desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
+
+
+/* Webfont: Aceh-Bold */@font-face {
+  font-family: 'Aceh';
+    src: url('Aceh-Bold.eot'); /* IE9 Compat Modes */
+    src: url('Aceh-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('Aceh-Bold.woff') format('woff'), /* Modern Browsers */
+         url('Aceh-Bold.ttf') format('truetype'); /* Safari, Android, iOS */
+             font-style: normal;
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
+}
+
+      body {
             font-family: 'Montserrat', sans-serif;
             overflow: auto;
             background: #000000;
             
         }
 
+   
 
-       
-/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
-
-@font-face {
-    font-family: 'Aceh';
-    src: url('/fonts/aceh.woff2') format('woff2'),
-         url('/fonts/aceh.woff') format('woff'),
-         url('fonts/Aceh-Light.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-         body {
-            font-family: 'Montserrat', sans-serif;
-            overflow: auto;
-            background: linear-gradient(315deg, #534701 3%, #0F0404 38%, #0F0404 68%, #0F0404 98%);
-            animation: gradient 15s ease infinite;
-            background-size: 400% 400%;
-            background-attachment: fixed;
-            position: relative;
-        }
-
-h1, h2, h3 {
-    font-family: 'Aceh', sans-serif; 
-} */
 h1, h2, h3, header nav a {
     font-family: 'Aceh', sans-serif; /* Usar Aceh en los títulos */
     
@@ -70,7 +60,7 @@ h1, h2, h3, header nav a {
         }
 
         header {
-          background:  #0F0404 ;
+          
           width: 100%;
           display: flex;
           flex-direction: column; /* Organiza los elementos en una columna */
@@ -79,7 +69,6 @@ h1, h2, h3, header nav a {
           height: 200px; /* Ajusta el tamaño del header */
         }
 
-        
 
         header nav {
           display: flex;
@@ -104,130 +93,58 @@ h1, h2, h3, header nav a {
           border-bottom: 1px solid #FFE10B;
         }
 
-         /* Estilos para pantallas pequeñas */
-         @media (max-width: 768px) {
-
-header{
-  height: 350px;
-}
-header nav {
-  width: 100%;
-  flex-direction: column; /* Apila los enlaces verticalmente */
-  align-items: center;
-  margin-bottom: 150px;
-  gap: 13px;
-}
-
-header nav a {
-  display: block; /* Ocupa toda la línea */
-  
-  text-align: center; /* Centra el texto */   
-
-}
-
-header video{
-  margin-top: 150px;
-}
-}
+        
 
 
 
-        img {
-          width: 150px; 
-          height: auto;
-        }
-
-        footer{
-            background:  #0F0404 ;
+        footer{         
             width: 100%;
             display: flex; 
             justify-content: center; 
             align-items: center; 
             flex-direction: row; 
             flex-wrap: wrap;
-            height: 100px; 
+            
             gap: 20px; 
             padding: 1px;
             text-align: center;
         }
 
-        
-        section {
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            flex-direction: column; 
-            flex-wrap: wrap; 
-            gap: 20px; 
-            padding: 30px; 
-            margin: 30px;
-            border: 7px solid #FFE10B;
-            border-radius: 30px;
-            width: 400px; 
-        }
-
-
-        button{
-            background-color: #FFE10B;
-            color: #0F0404;
-            height: 50px;
-            width: 200px;
-            border: 5px solid #c0a301;
-            border-radius: 40px;
-            font-weight: bolder;
-            font-size: large;
-            cursor: pointer;
-        }
-
-        button:hover{
-            background-color: #8a7502;
-            transition: background-color 0.4s ease, color 0.4s ease;
-        }
-
-        button:active{
-            background-color: #0F0404;
-            color: #F3D9D1;
-            transition: background-color 0.2s ease, color 0.2s ease;
-        }
-
-      
-
-        section h1{
-            font-size: xx-large;
-
-        }
-
-        article h1 {
-    display: inline-block; /* Hace que el ancho del h2 sea del tamaño del texto */
-    text-align: center; /* Centra el texto si está en un contenedor más grande */
-    border-bottom: 5px solid #FFE10B;
-    margin-bottom: 20px; /* Espacio debajo del h2 */
-}
-
-
-        article {
+        main {
             display: flex; 
             justify-content: center; 
             align-items: center; 
             flex-direction: row; /* Alineación horizontal predeterminada */
             flex-wrap: wrap; 
-            gap: 20px; 
-            padding: 20px;
             text-align: center;
+            
         }
 
-        article div {
-            width: 100%;
-            text-align: center;
-            margin-bottom: 40px;
+
+
+        h1 {
+            margin-top: 50px; 
+            margin-left: 50px;
             text-transform: uppercase;
+            font-size: 50px;
+            
         }
 
-        article section{
-            width: 300px;
-            border: none;
-        }
+       
+       
 
+        @media (max-width: 900px) {
+
+          body::before{
+            background-image: none;
+          }
+
+          h1,h2{
+            text-align: center;
+            margin-left: 0px;
+          }
+          
+        }
 
         footer div{
           text-align: left;
@@ -263,59 +180,18 @@ header video{
         footer li a:hover {
           color: #FFE10B; 
         }
-        .timetable-container {
-            text-align: center;
-            padding: 20px 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            width: 90%;
-            max-width: 600px;
-            margin: 0 auto;
-        }     
 
-        .timetable-container h1{
-          margin-bottom: 80px;
-        }
-
-
-
-        .timetable {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .timetable li {
-            display: flex;
-            justify-content: space-between;
-            background: #FFE10B;
-            padding: 10px 15px;
-            margin: 10px 0;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-        }
-
-        .timetable li:hover {
-            background: #c0a301;
-            transform: scale(1.05);
-            transition: all 0.2s ease-in-out;
-        }
-
-        .time,.artist {
-            font-weight: bold;
-            color: #0F0404;
-        }
+       
 
         
-
         #logo-video {
             width: 300px;  
             height: auto;
             display: block;
             mix-blend-mode: lighten;
         }
-       
 
+       
         .footer-links {
           width: 100%; /* Asegura que ocupe todo el ancho disponible */
           text-align: center; /* Centra los enlaces */
@@ -349,13 +225,65 @@ header video{
           }
         }
 
+       /*  @media (max-width: 447px) {
+          h1 {
+            text-transform: uppercase;
+            font-size: 30px;
+            margin-bottom: 150px;
+        }
+} */
+img{
+          border:10px ridge #01f121;
+          
+         
+          width: 25%;
+          
+          margin-top: 40px;
+        }
+   
+/* Estilos para pantallas pequeñas */
+        @media (max-width: 768px) {
+
+        header{
+          height: 350px;
+        }
+        header nav {
+          width: 100%;
+          flex-direction: column; /* Apila los enlaces verticalmente */
+          align-items: center;
+          margin-bottom: 150px;
+          gap: 13px;
+        }
+
+        header nav a {
+          display: block; /* Ocupa toda la línea */
+          
+          text-align: center; /* Centra el texto */   
+        
+        }
+
+        header video{
+          margin-top: 150px;
+        }
+
+        img{
+          width: 90%;
+          
+          margin-bottom: 30px;
+        }
+        }
+
+       
+
     </style>
 </head>
 <body>
+  
+
     <header>
 
       <a href="index.html">
-        <video autoplay loop muted playsinline id="logo-video">
+        <video autoplay loop muted playsinline preload="auto" id="logo-video">
             <source src="img/logo3d.mp4" type="video/mp4">
             Tu navegador no soporta videos.
         </video>
@@ -363,7 +291,7 @@ header video{
 
         <nav>
           <a href="index.html">Home</a>
-          <a href="Line-up.html"class="activePage">Line up</a>
+          <a href="Line-up.html" id="lineUp" class="activePage">Line up</a>
           <a href="FAQs.html">FAQs</a>
           <a href="TravelInfo.html">Travel Info</a>
           <a href="Rules.html">Rules</a>
@@ -372,109 +300,60 @@ header video{
 
     </header>
 
-    <article>
-        <div>
-            <h1>Artist line-up</h1>
-        </div>
-        <section>
-            <img src="img/ValerieSantos.jpg" alt="Logo">
-            <h3>VALERIE SANTOS</h3>
-            <a href=""><button type="button">Socials</button></a>
-        </section>
-        <section>
-            <img src="img/GastonZani.jpg" alt="Logo">
-            <h3>GASTON ZANI</h3>
-            <a href=""><button type="button">Socials</button></a>
-        </section>
-        <section>
-            <img src="img/Logos Rave On-01.png" alt="Logo">
-            <h3>STUDIOSTINE</h3>
-            <a href=""><button type="button">Socials</button></a>
-        </section>
-        <section>
-            <img src="img/Logos Rave On-01.png" alt="Logo">
-            <h3>XHEIS</h3>
-            <a href=""><button type="button">Socials</button></a>
-        </section>
-        <section>
-            <img src="img/Logos Rave On-01.png" alt="Logo">
-            <h3>OZI</h3>
-            <a href=""><button type="button">Socials</button></a>
-        </section>
-        <section>
-            <img src="img/Logos Rave On-01.png" alt="Logo">
-            <h3>NIGHTFLUXX</h3>
-            <a href=""><button type="button">Socials</button></a>
-        </section>
-    </article>
+    
+    
+   
+    <main>
 
-    <article>
-        <div class="timetable-container">
-          <h1>Event Timetable</h1>
-          <ul class="timetable">
-              <li>
-                  <span class="time">21:00 - 22:00</span>
-                  <span class="artist">STUDIOSTINE</span>
-              </li>
-              <li>
-                  <span class="time">22:00 - 23:00</span>
-                  <span class="artist">OZI</span>
-              </li>
-              <li>
-                  <span class="time">23:00 - 00:00</span>
-                  <span class="artist">XHEIS</span>
-              </li>
-              <li>
-                  <span class="time">00:00 - 01:30</span>
-                  <span class="artist">VALERIE SANTOS</span>
-              </li>
-              <li>
-                  <span class="time">01:30 - 03:00</span>
-                  <span class="artist">GASTON ZANI</span>
-              </li>
-              <li>
-                  <span class="time">03:00 - 03:30</span>
-                  <span class="artist">NIGHTFLUXX</span>
-              </li>
-          </ul>
-      </div>
-    </article>
-
-
-    <footer>
+      
+          <img src="img/Flyer RaveOn 220325.png" alt="Placeholder Image">
         
 
-        <div>
-          <ul>
-            <li >
-              <a href="mailto:RAVEONWORLD@GMAIL.COM" aria-label="Send us an email">
-                <i class="fa-solid fa-envelope"></i>
-              </a>
-            </li>
-            <li >
-              <a href="https://www.instagram.com/raveon_world/" target="_blank" rel="noopener noreferrer" aria-label="Visit us on Instagram">
-                <i class="fa-brands fa-instagram"></i>
-              </a>
-            </li>
-            <li >
-              <a href="https://www.tiktok.com/@raveon_world" target="_blank" rel="noopener noreferrer" aria-label="Visit us on Instagram">
-                <i class="fa-brands fa-tiktok"></i>
-              </a>
-            </li>
-            <li class="facebook">
-              <a href="https://www.tiktok.com/@raveon_world" target="_blank" rel="noopener noreferrer" aria-label="Visit us on Facebook">
-                <i class="fa-brands fa-facebook"></i>
-              </a>
-            </li>
-          </ul>
-      </div>
 
-      <div class="footer-links">
-        <a href="PrivacyPolicy.html">Privacy Policy</a>
-        <a href="TermsOfService.html">Terms of Service</a>
-      </div>
-<p> © 2025 Rave On. All Rights Reserved. </p>
+    </main>
+
+
+    
+
+    <footer>
+      
+        
+      <div>
+        <ul>
+          <li >
+            <a href="mailto:RAVEONWORLD@GMAIL.COM" aria-label="Send us an email">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+          </li>
+          <li >
+            <a href="https://www.instagram.com/raveon_world/" target="_blank" rel="noopener noreferrer" aria-label="Visit us on Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </li>
+          <li >
+            <a href="https://www.tiktok.com/@raveon_world" target="_blank" rel="noopener noreferrer" aria-label="Visit us on Instagram">
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
+          </li>
+          <li class="facebook">
+            <a href="https://www.tiktok.com/@raveon_world" target="_blank" rel="noopener noreferrer" aria-label="Visit us on Facebook">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+          </li>
+        </ul>
+    </div>
+
+
+    <div class="footer-links">
+      <a href="PrivacyPolicy.html">Privacy Policy</a>
+      <a href="TermsOfService.html">Terms of Service</a>
+    </div>
+    <p> © 2025 Rave On. All Rights Reserved. </p>
     </footer>
 
+    
+ 
+
+    
 </body>
 </html>
